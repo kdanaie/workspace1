@@ -1,3 +1,6 @@
 <h1>Showing a selected article</h1>
 <p> <strong><%= @article.title.upcase %></strong></p>
 <p><%= @article.description %></p>
+
+<%= link_to "Back to articles listing", articles_path %>|
+<%= link_to "Edit this article", edit_article_path(@article) %>
