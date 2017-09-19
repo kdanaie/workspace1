@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'pages#home'
   get '/pages/about', to: 'pages#about'
+  
+  resources :articles
   # get '/welcome/home', to: 'welcome#home'
   # get '/welcome/about', to: 'welcome#about'
   # Example of regular route:
