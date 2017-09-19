@@ -1,0 +1,9 @@
+      <a class="navbar-brand" id= "logo" href="index">Alpha Blog</a>
+            <a class="navbar-brand" id= "logo" href="index">Alpha Blog</a>
+            
+                    <li><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <%= link_to "Articles", article_path %>
+        
+                    <li><a href="#">Action</a></li>
+            <li><%= link_to "New Article", new_article_path %></li>
+            
