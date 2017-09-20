@@ -1,13 +1,3 @@
-      <a class="navbar-brand" id= "logo" href="index">Alpha Blog</a>
-            <a class="navbar-brand" id= "logo" href="index">Alpha Blog</a>
-            
-                    <li><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <%= link_to "Articles", article_path %>
-        
-                    <li><a href="#">Action</a></li>
-            <li><%= link_to "New Article", new_article_path %></li>
-            
-            
 <div class="row">
     <div class="col-xs-12"></div>
     
@@ -43,7 +33,7 @@
          
             <div class="form-group">
                 <div class="col-xs-offset-2 col-xs-10">
-                    <%= f.submit "Sign Up", class: "btn btn-primary btn-lg btn-block" %> 
+                    <%= f.submit(@user.new_record? ? "Sign Up" :  "Update Your Account", class: "btn btn-primary btn-lg btn-block") %> 
                 </div>
             </div>
                 
