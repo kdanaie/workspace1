@@ -8,7 +8,13 @@ Rails.application.routes.draw do
   get '/pages/about', to: 'pages#about'
   
   resources :articles
-  # get '/welcome/home', to: 'welcome#home'
+
+ get 'signup', to: 'users#new'
+ # A  post 'users', to: 'users#create'
+ # when we have defined :new 
+  resources :users, except: [:new]
+
+   # get '/welcome/home', to: 'welcome#home'
   # get '/welcome/about', to: 'welcome#about'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
