@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
     end
     
     def create
-        debugger
+       # debugger
         # render plain: params[:article].inspect
         @article = Article.new(article_params)
         # hard code user_id until authentication on place
