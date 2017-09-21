@@ -10,6 +10,11 @@ Rails.application.routes.draw do
   resources :articles
 
  get 'signup', to: 'users#new'
+ 
+ get 'login', to: 'sessions#new'
+ post 'login', to: 'sessions#create'
+ delete 'logout', to: 'sessions#destroy'
+ 
  # A  post 'users', to: 'users#create'
  # when we have defined :new 
   resources :users, except: [:new]
