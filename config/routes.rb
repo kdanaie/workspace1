@@ -18,6 +18,8 @@ Rails.application.routes.draw do
  # A  post 'users', to: 'users#create'
  # when we have defined :new 
   resources :users, except: [:new]
+  resources :categories, except: [:destroy]
+
 
    # get '/welcome/home', to: 'welcome#home'
   # get '/welcome/about', to: 'welcome#about'
