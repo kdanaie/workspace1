@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @firm.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @firm.address %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @firm.url %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @firm.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @firm.phone %>
+</p>
+
+<p>
+  <strong>Contactperson:</strong>
+  <%= @firm.contactperson %>
+</p>
+
+<p>
+  <strong>Firmtype:</strong>
+  <%= @firm.firmtype %>
+</p>
+
+<p>
+  <strong>Firmclass:</strong>
+  <%= @firm.firmclass %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @firm.description %>
+</p>
+
+<%= link_to 'Edit', edit_firm_path(@firm) %> |
+<%= link_to 'Back', firms_path %>

@@ -1,0 +1,152 @@
+  <div class="field">
+  show
+  <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Prodtype:</strong>
+  <%= @product.prodtype %>
+</p>
+
+<p>
+  <strong>Numberinstock:</strong>
+  <%= @product.numberinstock %>
+</p>
+
+<p>
+  <strong>Numberminimum:</strong>
+  <%= @product.numberminimum %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
+
+
+
+index
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Prodtype</th>
+      <th>Numberinstock</th>
+      <th>Numberminimum</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.description %></td>
+        <td><%= product.prodtype %></td>
+        <td><%= product.numberinstock %></td>
+        <td><%= product.numberminimum %></td>
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_product_path %>
+
+index
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Products</h1>
+<%= link_to 'New Product', new_product_path %>
+<br>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="form-group">
+          <div class="control-label col-sm-2">
+            Name
+          </div>  
+        </div>  
+        <div class="form-group">
+            <div class="control-label col-sm-2">
+              Description
+          </div>  
+        </div>  
+        <div class="form-group">
+            <div class="control-label col-sm-1">
+              Prodtype
+          </div>  
+        </div>  
+        <div class="form-group">
+            <div class="control-label col-sm-2">
+              nr. in stock
+          </div>  
+        </div>  
+        <div class="form-group">
+            <div class="control-label col-sm-2">
+              Min. nr.
+          </div>  
+        </div>  
+        <div class="form-group">
+          <div class="control-label col-sm-2">
+              &nbsp;
+          </div>  
+        </div>  
+        <div class="form-group">
+          <div class="control-label col-sm-1">
+            &nbsp;
+          </div>  
+        </div>  
+        <div class="form-group">
+          <div class="control-label col-sm-1">
+            &nbsp;
+          </div>  
+        </div>  
+        <% @products.each do |product| %>
+          <div class="col-sm-2">
+              <%= product.name %>
+          </div>
+          <div class="col-sm-2">
+              <%= product.description %>
+          </div>
+          <div class="col-sm-1">
+              <%= product.prodtype %>
+          </div>
+          <div class="col-sm-2">
+              <%= product.numberinstock %>
+          </div>
+          <div class="col-sm-2">
+              <%= product.numberminimum %>
+          </div>
+          <div class="col-sm-1">
+              <%= link_to 'Show', product %>
+          </div>
+          <div class="col-sm-1">
+              <%= link_to 'Edit', edit_product_path(product) %>
+          </div>
+          <div class="col-sm-1">
+              <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        <% end %>
+
+
+
+    </div>  
+</div>  
+
+

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  prodtype: MyString
+  numberinstock: 1
+  numberminimum: 1
+
+two:
+  name: MyString
+  description: MyString
+  prodtype: MyString
+  numberinstock: 1
+  numberminimum: 1

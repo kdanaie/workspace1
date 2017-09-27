@@ -1,0 +1,31 @@
+<% obj.each do |product| %>
+    <div class="row">
+        <div class="col-sx-8 col-sx-offset-2">
+            <div class="well well-lg">
+                <div class="product-name">
+                    <%= link_to product.name, product_path(product) %>
+                </div>
+                <div class="product-body">
+                    <%= truncate(product.description, length: 100) %>
+                    <div class="product-meta-details">
+                  <!--      Created by: < % # = product.user.username if product.user% >, -->
+                      <small>  <%= time_ago_in_words(product.created_at) %> ago,
+                        last updated: <%= time_ago_in_words(product.updated_at) %> ago</small> 
+                    </div>
+                </div>
+                
+                <% #if product.categories.any? %>
+                    <p>Categories: <%#= render product.categories %></p>
+                <% #end %>
+                
+                <% # if logged_in? && (current_user == product.user || current_user.admin?) %>
+                    <div class="product-actions">
+                       <%= link_to "Edit this product", edit_product_path(product), class: "btn btn-xs btn-primary" %>
+                       <%= link_to "Delete this products", product_path(product), method: :delete, data: { confirm: "Are you sure you want to delete the product?"}, class: "btn btn-xs btn-danger" %>
+                    </div>
+                 <% #end %>
+            </div>
+        </div>
+    </div>
+     
+ <% end %>

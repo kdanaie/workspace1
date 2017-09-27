@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
     def index
         #@articles = Article.all
         #@articles = Article.paginate(page: params[:page])
-        @articles = Article.paginate(page: params[:page], per_page: 3)
+        @articles = Article.order("id DESC").paginate(page: params[:page], per_page: 5)
     end  
     
     def new

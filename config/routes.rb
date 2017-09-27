@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :firms
+  resources :products
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -20,6 +22,8 @@ Rails.application.routes.draw do
   resources :users, except: [:new]
   
   resources :categories, except: [:destroy]
+  
+  resources :firms
 
 
    # get '/welcome/home', to: 'welcome#home'
